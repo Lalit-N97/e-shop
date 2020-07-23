@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <div class="brand">
+          <button onclick="openMenu()">
+            &#9776;
+          </button>
+          <a href="index.html">E-SHOP</a>
+        </div>
+        <div class="header-links">
+          <a href="cart.html">Cart</a>
+          <a href="SignIn.html">SignIn</a>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <button class="sidebar-close-button" onclick="closeMenu()">X</button>
+        <h3>Categories</h3>
+        <ul>
+          <li>
+            <a href="#">Laptops</a>
+          </li>
+          <li>
+            <a href="#">Mobile Phones</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="content">
+          <ul class="products">
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJxjwx_fSU2EEp1FlVDv8hEyp3WDkZVBkesWoEaajM3l-Pa6jadEtPx0glEqWG9sL5IaOVun7v&usqp=CAc"
+                  alt="Item1"
+                />
+                <div class="product-name">
+                  <a href="product.html"> Ideapad</a>
+                </div>
+                <div class="product-brand">Lenovo</div>
+                <div class="product-price">Rs-66,490</div>
+                <div class="product-rating">4.5 stars (10 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTclRua2dg3u8PgVMk8I35yi0vETEyK3pfT-A&usqp=CAU"
+                  alt="Item2"
+                />
+                <div class="product-name">
+                  <a href="producr.html">Hp Pavillon</a>
+                </div>
+                <div class="product-brand">HP</div>
+                <div class="product-price">Rs-78,990</div>
+                <div class="product-rating">4.1 stars (100 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpqTEzU6JvbOalCZAWHQzzUSHde2QzeW__XA&usqp=CAU"
+                  alt="Item3"
+                />
+                <div class="product-name">
+                  <a href="product.html">Asus Vivobook</a>
+                </div>
+                <div class="product-brand">Asus</div>
+                <div class="product-price">Rs-99,000</div>
+                <div class="product-rating">4.0 stars (1000 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQDiHyI2K-TFsQEIMOc1Srvp_9cXkiiX0xkmr-wr457L6rUv9odqjtP0zjdzRSdW96bbAWbqnJg&usqp=CAc"
+                  alt="Item4"
+                />
+                <div class="product-name">
+                  <a href="product.html">Macbook Air</a>
+                </div>
+                <div class="product-brand">Apple</div>
+                <div class="product-price">Rs-81,000</div>
+                <div class="product-rating">4.9 stars (1500 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ6wQtk6ZoCHaeLj6-aN9z1_WnEPglB1TG08KS3TVx99ejXLHKmeGnIRgoUTCKE9erdI1QWOqML&usqp=CAc"
+                  alt="Item5"
+                />
+                <div class="product-name">
+                  <a href="product.html">Macbook Pro</a>
+                </div>
+                <div class="product-brand">Apple</div>
+                <div class="product-price">Rs-1,99,000</div>
+                <div class="product-rating">4.6 stars (900 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrVsNOAx7deO8zjBP5F7Cl4LHc_LxYfdFNvwujcsOZBgr5DM1djVbIvizb7yixB9LT2q4yp9Y&usqp=CAc"
+                  alt="Item6"
+                />
+                <div class="product-name">
+                  <a href="product.html">Lenovo Thinkbook</a>
+                </div>
+                <div class="product-brand">Lenovo</div>
+                <div class="product-price">Rs-34,000</div>
+                <div class="product-rating">4.6 stars (100 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwoJXgeGyUC1VQcF4Jk6vdSmYzb0B339a7sZ2xtOTphXR4KbZW0JEPzmDBcGSUqfm_INaTaQU&usqp=CAc"
+                  alt="Item7"
+                />
+                <div class="product-name">
+                  <a href="product.html">Acer Swift 5</a>
+                </div>
+                <div class="product-brand">Acer</div>
+                <div class="product-price">Rs-46,990</div>
+                <div class="product-rating">4.6 stars (100 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img
+                  class="product-image"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRpabKGqDaylYiRpz92I4KsBKGmHf_D8EqsNI_l845144a5qzq-aM0lVJnlQA&usqp=CAc"
+                  alt="Item7"
+                />
+                <div class="product-name">
+                  <a href="product.html">Acer one 14</a>
+                </div>
+                <div class="product-brand">Acer</div>
+                <div class="product-price">Rs-23,990</div>
+                <div class="product-rating">4.0 stars (409 reviews)</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">All rights reserved. cc</footer>
+    </div>
+
+    <script>
+      function openMenu() {
+        document.querySelector(".sidebar").classList.add("open");
+      }
+      function closeMenu() {
+        document.querySelector(".sidebar").classList.remove("open");
+      }
+    </script>
+  </body>
+</html>
