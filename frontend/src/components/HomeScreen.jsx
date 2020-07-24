@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "./data";
+import axios from "axios";
 
 function HomeScreen(props) {
+  const [product, setProduct] = useState([]);
+
   return (
     <ul class="products">
       {data.products.map((product) => {
