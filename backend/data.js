@@ -9,7 +9,8 @@ export default {
       price: "66,490",
       rating: 4.5,
       numReviews: 10,
-      desc: "",
+      desc: "pafv bpiefj biefb efhs buef ",
+      countInStock: 4,
     },
     {
       _id: 2,
@@ -20,7 +21,8 @@ export default {
       price: "78,990",
       rating: 4.1,
       numReviews: 100,
-      desc: "",
+      desc: "savpoas apsvo oj bpoej biej b",
+      countInStock: 4,
     },
     {
       _id: 3,
@@ -31,7 +33,8 @@ export default {
       price: "99,000",
       rating: 4.0,
       numReviews: 1000,
-      desc: "",
+      desc: "ondgvon ksanvoinafb ",
+      countInStock: 4,
     },
     {
       _id: 4,
@@ -42,7 +45,8 @@ export default {
       price: "81,000",
       rating: 4.9,
       numReviews: 1500,
-      desc: "",
+      desc: "from a to z",
+      countInStock: 0,
     },
     {
       _id: 5,
@@ -53,7 +57,8 @@ export default {
       price: "1,90,000",
       rating: 4.8,
       numReviews: 900,
-      desc: "",
+      desc: "elegant",
+      countInStock: 4,
     },
     {
       _id: 6,
@@ -64,7 +69,9 @@ export default {
       price: "34,000",
       rating: 4.6,
       numReviews: 200,
-      desc: "",
+      desc:
+        "ionasoignoangpebnbunefwjger h hg ewrh h r9hgwerhgrew9hguweruo guwer",
+      countInStock: 4,
     },
     {
       _id: 7,
@@ -75,7 +82,8 @@ export default {
       price: "46,990",
       rating: 4.6,
       numReviews: 600,
-      desc: "",
+      desc: "great",
+      countInStock: 4,
     },
     {
       _id: 8,
@@ -86,7 +94,8 @@ export default {
       price: "23,990",
       rating: 4.6,
       numReviews: 1600,
-      desc: "",
+      desc: "good",
+      countInStock: 4,
     },
   ],
 };
