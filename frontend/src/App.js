@@ -14,20 +14,20 @@ function App() {
   };
 
   return (
-    <div class="grid-container">
-      <header class="header">
-        <div class="brand">
+    <div className="grid-container">
+      <header className="header">
+        <div className="brand">
           <button onClick={openMenu}>&#9776;</button>
           <Link to="/">E-SHOP</Link>
         </div>
-        <div class="header-links">
+        <div className="header-links">
           <Link to="/cart">Cart</Link>
           <Link to="/SignIn">SignIn</Link>
         </div>
       </header>
 
-      <aside class="sidebar">
-        <button class="sidebar-close-button" onClick={closeMenu}>
+      <aside className="sidebar">
+        <button className="sidebar-close-button" onClick={closeMenu}>
           X
         </button>
         <h3>Categories</h3>
@@ -41,15 +41,15 @@ function App() {
         </ul>
       </aside>
 
-      <main class="main">
-        <div class="content">
+      <main className="main">
+        <div className="content">
           <Switch>
             <Route path="/" exact={true} component={HomeScreen} />
             <Route path="/product/:id" exact={true} component={ProductScreen} />
           </Switch>
         </div>
       </main>
-      <footer class="footer">All rights reserved. cc</footer>
+      <footer className="footer">All rights reserved. cc</footer>
     </div>
   );
 }
