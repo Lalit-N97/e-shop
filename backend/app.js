@@ -1,4 +1,5 @@
 import express from "express";
+import bodyParser from "body-parser";
 import data from "./data";
 import dotenv from "dotenv";
 import config from "./config";
@@ -16,7 +17,7 @@ mongoose
   .catch((error) => console.log(error.reason));
 
 const app = express();
-
+app.use(bodyParser.json());
 app.use("/api/users", userRoutes);
 
 app.get("/api/products/:id", (req, res, next) => {

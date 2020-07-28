@@ -28,4 +28,5 @@ const detailsProduct = (productId) => async (dispatch) => {
   }
 };
 
+const saveProduct = (product) => async (dispatch) => {};
 export { listProducts, detailsProduct };
