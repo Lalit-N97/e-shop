@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import {
+  saveProduct,
+  listProducts,
+  deleteProduct,
+} from "../actions/productActions";
 
 function ProductsScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -13,8 +18,10 @@ function ProductsScreen(props) {
   const [countInStock, setCountInStock] = useState("");
   const [description, setDescription] = useState("");
   const [uploading, setUploading] = useState(false);
-  //   const productList = useSelector((state) => state.productList);
-  //   const { loading, products, error } = productList;
+
+  const productList = useSelector((state) => state.productList);
+  const { loading, products, error } = productList;
+
   const productSave = useSelector((state) => state.productSave);
   const {
     loading: loadingSave,
@@ -22,10 +29,38 @@ function ProductsScreen(props) {
     error: errorSave,
   } = productSave;
 
+  const productDelete = useSelector((state) => state.productDelete);
+  const {
+    loading: loadingDelete,
+    success: successDelete,
+    error: errorDelete,
+  } = productSave;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (successSave) {
+      setModalVisible(false);
+    }
+    dispatch(listProducts());
+  }, [successSave, successDelete]);
+
+  const openModal = (product) => {
+    setModalVisible(true);
+    setId(product._id);
+    setName(product.name);
+    setPrice(product.price);
+    setDescription(product.description);
+    setImage(product.image);
+    setBrand(product.brand);
+    setCategory(product.category);
+    setCountInStock(product.countInStock);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
       saveProduct({
+        _id: id,
         name,
         price,
         image,
@@ -33,10 +68,12 @@ function ProductsScreen(props) {
         category,
         countInStock,
         description,
-        rating,
-        numReviews,
       })
     );
+  };
+
+  const deleteHandler = (product) => {
+    dispatch(deleteProduct(product._id));
   };
 
   return (
@@ -88,8 +125,8 @@ function ProductsScreen(props) {
                   id="image"
                   onChange={(e) => setImage(e.target.value)}
                 ></input>
-                <input type="file" onChange={uploadFileHandler}></input>
-                {uploading && <div>Uploading...</div>}
+                {/* <input type="file" onChange={uploadFileHandler}></input>
+                {uploading && <div>Uploading...</div>} */}
               </li>
               <li>
                 <label htmlFor="brand">Brand</label>

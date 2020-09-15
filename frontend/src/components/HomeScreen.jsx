@@ -18,6 +18,9 @@ function HomeScreen(props) {
     <h3>{error}</h3>
   ) : (
     <ul className="products">
+      <button>
+        <Link to="/products">Upload Product</Link>
+      </button>
       {products.map((product) => {
         return (
           <li key={product._id}>
