@@ -13,7 +13,7 @@ router.post("/register", async (req, res) => {
   const newUser = await user.save();
   if (newUser) {
     res.send({
-      _id: newUser._id,
+      _id: newUser.id,
       name: newUser.name,
       email: newUser.email,
       password: newUser.password,
@@ -57,6 +57,11 @@ router.get("/createadmin", async (req, res) => {
   } catch (err) {
     res.send({ msg: err.message });
   }
+});
+
+router.get("/", async (req, res) => {
+  const users = await User.find({});
+  res.send(users);
 });
 
 export default router;
