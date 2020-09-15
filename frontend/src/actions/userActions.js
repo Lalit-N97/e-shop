@@ -19,7 +19,7 @@ const signIn = (email, password) => async (dispatch) => {
     const data = res.data;
     dispatch({
       type: USER_SIGNIN_SUCCESS,
-      payload: { email, password },
+      payload: data,
     });
     Cookie.set("userInfo", JSON.stringify(data));
   } catch (err) {
@@ -44,7 +44,7 @@ const register = (name, email, password) => async (dispatch) => {
     const data = res.data;
     dispatch({
       type: USER_REGISTER_SUCCESS,
-      payload: { name, email, password },
+      payload: data,
     });
     Cookie.set("userInfo", JSON.stringify(data));
   } catch (err) {

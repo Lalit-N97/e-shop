@@ -5,9 +5,13 @@ import {
   USER_REGISTER_REQUEST,
   USER_REGISTER_SUCCESS,
   USER_REGISTER_FAIL,
+  USER_LOGOUT,
+  USER_UPDATE_REQUEST,
+  USER_UPDATE_SUCCESS,
+  USER_UPDATE_FAIL,
 } from "../constants/userConstants";
 
-function usersigninReducer(state = {}, action) {
+function userSigninReducer(state = {}, action) {
   switch (action.type) {
     case USER_SIGNIN_REQUEST:
       return { loading: true };
@@ -15,10 +19,14 @@ function usersigninReducer(state = {}, action) {
       return { loading: false, userInfo: action.payload };
     case USER_SIGNIN_FAIL:
       return { loading: false, error: action.payload };
+    case USER_LOGOUT:
+      return {};
     default:
       return state;
   }
 }
+
+//function userUpdateReducer(state = {}, action) {}
 
 function userRegisterReducer(state = {}, action) {
   switch (action.type) {
@@ -32,5 +40,4 @@ function userRegisterReducer(state = {}, action) {
       return state;
   }
 }
-
-export { usersigninReducer, userRegisterReducer };
+export { userSigninReducer, userRegisterReducer };
